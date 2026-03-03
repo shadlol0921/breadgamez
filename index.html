@@ -4,32 +4,40 @@ index.html
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>breadgamez - Embedded Games</title>
+<title>breadgamez - embedded games</title>
 <style>
 body { margin:0; font-family: Arial,sans-serif; background:#121212; color:white; }
 header { background:#1f1f1f; padding:15px; text-align:center; font-size:28px; font-weight:bold; }
 .games { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px; padding:20px; }
-.game-card { background:#1f1f1f; padding:15px; border-radius:10px; cursor:pointer; transition:0.2s; text-align:center; color:white; font-weight:bold; }
+.game-card { background:#1f1f1f; padding:15px; border-radius:10px; cursor:pointer; transition:0.2s; text-align:center; color:white; font-weight:bold; text-transform: lowercase; }
 .game-card:hover { background:#333; transform:scale(1.05); }
 #game-container { display:none; padding:20px; }
 iframe { width:100%; height:80vh; border:none; border-radius:10px; }
-button { padding:10px 15px; border:none; background:#00bcd4; color:white; border-radius:5px; cursor:pointer; margin-bottom:10px; }
-#search { width:80%; padding:10px; margin:20px auto; display:block; border-radius:8px; border:none; font-size:16px; }
+button { padding:10px 15px; border:none; background:#00bcd4; color:white; border-radius:5px; cursor:pointer; margin-bottom:10px; text-transform: lowercase; }
+#search { width:80%; padding:10px; margin:20px auto; display:block; border-radius:8px; border:none; font-size:16px; text-transform: lowercase; }
 </style>
 </head>
 <body>
 
-<header>🎮 BreadGamez - Embedded Games</header>
-<input type="text" id="search" placeholder="Search games..." onkeyup="searchGames()">
+<header>🍞 breadgamez</header>
+<input type="text" id="search" placeholder="search games..." onkeyup="searchGames()">
 
 <div class="games" id="gameList">
-    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128094/embed')">Flappy Bird Clone</div>
-    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128137/embed')">Maze Runner</div>
-    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128192/embed')">Platform Jumper</div>
+    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128094/embed')">flappy bird clone</div>
+    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128137/embed')">maze runner</div>
+    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128192/embed')">platform jumper</div>
+    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128210/embed')">space shooter</div>
+    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128235/embed')">race track</div>
+    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128250/embed')">doodle jump clone</div>
+    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128275/embed')">ball maze</div>
+    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128300/embed')">tower defense</div>
+    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128325/embed')">snake classic</div>
+    <div class="game-card" onclick="loadGame('https://scratch.mit.edu/projects/10128350/embed')">breakout clone</div>
+    <!-- add more scratch game embeds here -->
 </div>
 
 <div id="game-container">
-    <button onclick="closeGame()">⬅ Back to Games</button>
+    <button onclick="closeGame()">⬅ back to games</button>
     <iframe id="gameFrame"></iframe>
 </div>
 
